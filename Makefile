@@ -80,7 +80,7 @@ dist:
 	@install -m 0755 scripts/* dist/usr/bin
 	@# Install our libexec directory.
 	@rm -rf dist/lib && cp -ar lib/ dist/usr/lib
-	@install -m 0755 bin/* dist/usr/lib/novm/libexec
+	@install -m 0755 bin/* dist/usr/lib/novm/libexec || true
 	@# Install our python code.
 	@mkdir -p dist/usr/lib/novm/python
 	@rsync -ru --delete --exclude=*.pyc novm \

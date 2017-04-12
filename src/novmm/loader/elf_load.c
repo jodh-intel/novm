@@ -28,6 +28,8 @@
 #include <string.h>
 #include <stdio.h>
 
+extern int doLoad(void *, size_t, void *, size_t);
+
 #define ELF_LOAD(phdr, phnum, elf_start, self)   \
 do {                                             \
     int i;                                       \
