@@ -85,7 +85,7 @@ func checkCapability(
 		uintptr(fd),
 		uintptr(C.IoctlCheckExtension),
 		capability.number)
-	if r != 1 || e != 0 {
+	if r < 0 || e != 0 {
 		return &capability
 	}
 
